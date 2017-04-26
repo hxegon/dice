@@ -101,7 +101,7 @@ impl fmt::Display for RollResult {
     /// ```
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let as_strings: Vec<_> = self.iter().map(|n| n.to_string()).collect();
-        write!(f, "{} (Total: {})", as_strings.connect(", "), self.total())
+        write!(f, "{} (Total: {})", as_strings.join(", "), self.total())
     }
 }
 
